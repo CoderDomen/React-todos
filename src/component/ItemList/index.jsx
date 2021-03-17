@@ -4,18 +4,14 @@ import "./index.scss";
 
 class ItemList extends Component {
 
-  // emt = (id,value) =>{
-  //   this.props.emtt(id,value)
-  // }
-
   render() {
-    let { todos,emtt,dele } = this.props;
+    let { todos,change,dele } = this.props;
     console.log(todos);
 
     return (
       <ul className="ul_wrapper">
         {todos.map(item => {
-          return <Item key={item.id} {...item} emt={emtt}  dele={dele}/>;
+          return <Item key={item.id} {...item} change={change}  dele={dele}/>;
         })}
       </ul>
     );

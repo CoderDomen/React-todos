@@ -13,7 +13,7 @@ class Header extends Component {
     }
     // 创建一个todo对象
     let todo = { id: Date.now(), name: target.value, done: false };
-    this.props.em(todo); // 子传父带参数
+    this.props.add(todo); // 子传父带参数
     target.value = "";
   };
 

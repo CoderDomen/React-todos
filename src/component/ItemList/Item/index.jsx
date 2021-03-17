@@ -21,9 +21,8 @@ class Item extends Component {
   };
 
   // 改变状态,获取id，子传父组件,修改done状态
-  cha = (e, id) => {
-    // console.log(id ,e.target.checked);
-    this.props.emt(id, e.target.checked);
+  change = (e, id) => {
+    this.props.change(id, e.target.checked);
   };
 
   dele = id => {
@@ -48,7 +47,7 @@ class Item extends Component {
           type="checkbox"
           checked={done}
           onChange={e => {
-            this.cha(e, id);
+            this.change(e, id);
           }}
         />
         <span className="item_content">{name}</span>

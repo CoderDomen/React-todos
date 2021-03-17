@@ -3,7 +3,6 @@ import "./index.scss";
 
 class Footer extends Component {
   select = e => {
-    // console.log(e);
     this.props.select(e.target.checked);
   };
 
